@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <div style={{backgroundColor:'blue'}}>Footer</div>
+        null
     )
 }
 
