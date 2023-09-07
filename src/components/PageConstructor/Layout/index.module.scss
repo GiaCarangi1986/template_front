@@ -1,0 +1,10 @@
+.component {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 30px 1fr 30px;
+    background: var(--test);
+
+    & > * {
+        padding: 5px;
+    }
+}
