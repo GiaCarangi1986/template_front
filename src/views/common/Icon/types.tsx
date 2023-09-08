@@ -11,6 +11,7 @@ type PropsType = {
     width?: number;
     height?: number;
     variant?: keyof typeof VariantEnum;
+    withoutEffects?: boolean;
 }
 
 export type { PropsType }

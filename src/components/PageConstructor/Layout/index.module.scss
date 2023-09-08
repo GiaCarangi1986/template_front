@@ -2,7 +2,7 @@
     height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr 0px;
-    background: var(--test);
+    background: var(--color-blue-841);
 
     & > * {
         padding: 20px;

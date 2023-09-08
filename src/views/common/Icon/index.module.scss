@@ -19,4 +19,8 @@
       color: var(--color-blue-cea);
     }
   }
+
+  &__without_effects {
+    pointer-events: none;
+  }
 }
