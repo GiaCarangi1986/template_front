@@ -1,5 +1,6 @@
-import IconButton from "./IconButton";
+import IconButton from './IconButton';
+import Icon from './Icon'
 
 export {
-    IconButton
+    IconButton, Icon
 }

@@ -1,0 +1,22 @@
+.component {
+  & > svg {
+    width: var(--width);
+    height: var(--height);
+  }
+
+  &__default {
+    color: var(--color-blue-841);
+
+    &:hover {
+      color: var(--color-blue-691);
+    }
+  }
+
+  &__secondary {
+    color: var(--color-white-fff);
+
+    &:hover {
+      color: var(--color-blue-cea);
+    }
+  }
+}

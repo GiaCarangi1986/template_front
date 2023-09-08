@@ -5,18 +5,18 @@ import { useLocation } from 'react-router-dom';
 // import Logo from './Logo';
 // import User from './User';
 // import Cameras from './Cameras';
-import { ROUTE_INFO } from '../../../const';
+import { ROUTE_INFO } from '../../../const/common';
 import Logo from './Logo';
 
 import { PropsType } from './types';
 import style from './index.module.scss';
 
 const Header: FC<PropsType> = () => {
-    const { pathname } = useLocation();
+    const {pathname} = useLocation();
 
     return (
         <header className={style.component}>
-            <Logo />
+            <Logo/>
             <div>cameras</div>
             {/* {pathname === ROUTE_INFO.main.path && <Cameras />} */}
             {/* {showLinks && <Navigation />} */}

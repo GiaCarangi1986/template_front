@@ -10,7 +10,6 @@ type RouteInfoType = {
 };
 
 
-
 export const ROUTE_INFO: Record<string, RouteInfoType> = {
     main: {
         pageName: 'main',
