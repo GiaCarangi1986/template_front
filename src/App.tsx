@@ -1,17 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import { ROUTE_INFO } from './const/common';
+import { RouterConst } from './const';
 import Main from './pages/Main';
 
 const AppWithRouter = () => {
     const PAGE = {
-        [ROUTE_INFO.main.pageName]: Main,
+        [RouterConst.DESCRIPTION.main.pageName]: Main,
     };
 
     return (
         <Routes>
-            {Object.keys(ROUTE_INFO).map((key) => {
-                const elem = ROUTE_INFO[key as keyof typeof ROUTE_INFO];
+            {Object.keys(RouterConst.DESCRIPTION).map((key) => {
+                const elem = RouterConst.DESCRIPTION[key as keyof typeof RouterConst.DESCRIPTION];
                 const PageComponent = PAGE[elem.pageName as keyof typeof PAGE];
 
                 return (

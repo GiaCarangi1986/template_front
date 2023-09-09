@@ -1,4 +1,5 @@
 import * as CamerasConst from './cameras'
-import * as CommonConst from './common'
+import * as RouterConst from './router'
+import * as BlockModuleConst from './blockModule'
 
-export {CamerasConst, CommonConst}
+export {CamerasConst, RouterConst, BlockModuleConst}

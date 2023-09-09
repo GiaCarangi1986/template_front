@@ -1,4 +1,4 @@
-type RouteInfoType = {
+type InfoType = {
   pageName: string;
   path: string;
   // btns?: Record<string, ColumnType>;
@@ -9,7 +9,7 @@ type RouteInfoType = {
   title: string;
 };
 
-export const ROUTE_INFO: Record<string, RouteInfoType> = {
+export const DESCRIPTION: Record<string, InfoType> = {
   main: {
     pageName: 'main',
     path: '/',
@@ -32,5 +32,3 @@ export const ROUTE_INFO: Record<string, RouteInfoType> = {
   // },
 
 }
-
-export const COLORS = {}
