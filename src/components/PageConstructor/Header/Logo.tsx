@@ -1,5 +1,4 @@
 import { LogoRND, LogoMMK } from '../../../images'
-
 import { Icon } from '../../../views/common'
 
 import style from './index.module.scss'
