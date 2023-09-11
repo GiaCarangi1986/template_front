@@ -4,6 +4,10 @@
   font-size: 12px;
   border-radius: 5px;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &__dark {
     background-color: var(--color-blue-85c);
     color: var(--color-blue-841);
