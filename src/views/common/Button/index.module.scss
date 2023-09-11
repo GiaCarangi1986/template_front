@@ -5,7 +5,7 @@
   border-radius: 5px;
 
   &__dark {
-    background-color: var(--color-blue-);
+    background-color: var(--color-blue-85c);
     color: var(--color-blue-841);
 
     &:hover {
@@ -24,6 +24,31 @@
 
   &__without_effects {
     pointer-events: none;
+  }
+
+  &__icon_view {
+    padding: 10px;
+
+    & > div {
+      pointer-events: none;
+    }
+
+    &_dark {
+      & > div {
+        color: var(--color-blue-85c);
+      }
+      &:hover > div {
+        color: var(--color-blue-691);
+      }
+    }
+    &_light {
+      & > div {
+        color: var(--color-white-fff);
+      }
+      &:hover > div {
+        color: var(--color-blue-cea);
+      }
+    }
   }
 
   &[disabled]:not([disabled='false']) {

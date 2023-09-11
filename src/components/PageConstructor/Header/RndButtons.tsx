@@ -1,5 +1,6 @@
-import { Button } from '../../../views/common'
+import { Button, Icon } from '../../../views/common'
 import { BlockModuleConst } from '../../../const'
+import { DefaultStateIcon } from '../../../images'
 
 import style from './index.module.scss'
 
@@ -12,7 +13,9 @@ const RndButtons = () => {
           return <Button key={elem.name} view='light'>{elem.btnLabel}</Button>
         })}
       </div>
-      <Button view='light'>исх.</Button>
+      <Button view='light' iconView='light'>
+        <Icon><DefaultStateIcon /></Icon>
+      </Button>
     </div>
   )
 }

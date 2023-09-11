@@ -11,11 +11,14 @@ const Button: FC<PropsType> = ({
   view = 'dark',
   withoutEffects = false,
   height= DEFAULT_HEIGHT,
+  iconView,
   ...props
 }) => {
   const classNames = cn(style.component, {
     [style[`component__${view}`]]: view,
-    [style['component__without_effects']]: withoutEffects
+    [style['component__without_effects']]: withoutEffects,
+    [style['component__icon_view']]: iconView,
+    [style[`component__icon_view_${iconView}`]]: iconView,
   })
   return (
     <button
