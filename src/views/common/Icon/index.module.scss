@@ -4,15 +4,15 @@
     height: var(--height);
   }
 
-  &__default {
-    color: var(--color-blue-841);
+  &__dark {
+    color: var(--color-blue-85c);
 
     &:hover {
       color: var(--color-blue-691);
     }
   }
 
-  &__secondary {
+  &__light {
     color: var(--color-white-fff);
 
     &:hover {

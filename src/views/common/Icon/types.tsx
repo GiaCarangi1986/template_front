@@ -1,16 +1,10 @@
-enum VariantEnum {
-    default = 'default',
-    primary = 'primary',
-    secondary = 'secondary',
-    danger = 'danger',
-    warning = 'warning'
-}
+import { VariantEnum } from '../../../const/styles'
 
 type PropsType = {
     children: React.ReactNode;
     width?: number;
     height?: number;
-    variant?: keyof typeof VariantEnum;
+    view?: keyof typeof VariantEnum;
     withoutEffects?: boolean;
 }
 

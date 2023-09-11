@@ -9,11 +9,11 @@ const DEFAULT_SIZE = 20
 const Icon: FC<PropsType> = ({
   children, width = DEFAULT_SIZE,
   height = DEFAULT_SIZE,
-  variant = 'default',
+  view = 'dark',
   withoutEffects = false
 }) => {
   const classNames = cn(style.component, {
-    [style[`component__${variant}`]]: variant,
+    [style[`component__${view}`]]: view,
     [style['component__without_effects']]: withoutEffects
   })
   return (

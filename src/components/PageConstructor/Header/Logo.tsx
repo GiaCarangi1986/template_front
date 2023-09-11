@@ -5,8 +5,8 @@ import style from './index.module.scss'
 
 const Logo = () => (
   <div className={style.logo}>
-    <Icon height={40} width={40} variant="secondary"><LogoRND/></Icon>
-    <Icon height={40} width={40} variant="secondary"><LogoMMK/></Icon>
+    <Icon height={40} width={40} view="light" withoutEffects><LogoRND/></Icon>
+    <Icon height={40} width={40} view="light" withoutEffects><LogoMMK/></Icon>
   </div>
 )
 

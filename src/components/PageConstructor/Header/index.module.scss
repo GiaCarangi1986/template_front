@@ -35,3 +35,18 @@
   color: var(--color-white-fff);
   font-size: 10px;
 }
+
+.rnd_btns {
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+  overflow: auto;
+
+  &__block {
+    overflow: auto;
+    white-space: nowrap;
+
+    display: flex;
+    gap: 15px;
+  }
+}
