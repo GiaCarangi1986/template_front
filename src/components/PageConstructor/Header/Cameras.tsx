@@ -25,7 +25,7 @@ const CameraRow: FC<CameraRowProps> = ({ position }) => {
   return (
     <>
       {cameras.map(el => {
-        let backgroundColor = bodyStyle.getPropertyValue('--color-gray-9d9')
+        let backgroundColor = bodyStyle.getPropertyValue('--color-gray-2d2')
         switch (el.isActive) {
           case true:
             backgroundColor = bodyStyle.getPropertyValue('--color-green-14c')
