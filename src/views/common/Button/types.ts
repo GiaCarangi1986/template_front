@@ -6,6 +6,7 @@ type PropsType = ButtonProps & {
   view?: keyof typeof VariantEnum;
   withoutEffects?: boolean;
   iconView?: keyof typeof VariantEnum;
+  transparentBtn?: boolean;
 }
 
 export type { PropsType }

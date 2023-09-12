@@ -12,6 +12,7 @@ const Button: FC<PropsType> = ({
   withoutEffects = false,
   height= DEFAULT_HEIGHT,
   iconView,
+  transparentBtn,
   ...props
 }) => {
   const classNames = cn(style.component, {
@@ -19,6 +20,7 @@ const Button: FC<PropsType> = ({
     [style['component__without_effects']]: withoutEffects,
     [style['component__icon_view']]: iconView,
     [style[`component__icon_view_${iconView}`]]: iconView,
+    [style['component__transparent']]: transparentBtn,
   })
   return (
     <button

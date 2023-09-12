@@ -1,9 +1,17 @@
-import { Icon } from '../../../views/common'
+import { Button, Icon } from '../../../views/common'
 import { UserIcon } from '../../../images'
 
 const User = () => {
-  // TODO прозрачная кнопка
-  return <Icon view='light' height={20} width={20}><UserIcon/></Icon>
+  return (
+    <Button iconView='light' transparentBtn>
+      <Icon
+        height={20}
+        width={20}
+      >
+        <UserIcon />
+      </Icon>
+    </Button>
+  )
 }
 
 export default User

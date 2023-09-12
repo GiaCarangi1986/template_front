@@ -41,18 +41,26 @@
       & > div {
         color: var(--color-blue-85c);
       }
+
       &:hover > div {
         color: var(--color-blue-691);
       }
     }
+
     &_light {
       & > div {
         color: var(--color-white-fff);
       }
+
       &:hover > div {
         color: var(--color-blue-cea);
       }
     }
+  }
+
+  &__transparent {
+    background-color: var(--transparent);
+    padding: 0;
   }
 
   &[disabled]:not([disabled='false']) {
