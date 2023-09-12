@@ -1,5 +1,8 @@
-type PropsType = {
-    children: React.ReactNode
+import { HeaderTemplateType } from '../Header/types'
+
+type LayoutProps = {
+    children: React.ReactNode;
+    headerTemplate: HeaderTemplateType[];
 }
 
-export type { PropsType }
+export type { LayoutProps }

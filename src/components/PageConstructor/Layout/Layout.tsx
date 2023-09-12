@@ -1,20 +1,24 @@
-import { FC } from 'react';
+import { FC } from 'react'
 
-import Header from '../Header';
-import Footer from '../Footer';
+import Header from '../Header'
+import Footer from '../Footer'
 
-import { PropsType } from './types';
+import { LayoutProps } from './types'
 import style from './index.module.scss'
 
-const Layout: FC<PropsType> = ({ children }) => {
-    return (
-        <div className={style.component}>
-            <Header/>
-            <div className={style.content}>{children}</div>
-            <Footer/>
+const Layout: FC<LayoutProps> = ({ children, headerTemplate }) => {
+  return (
+    <div className={style.component}>
+      <Header template={headerTemplate} />
+      <div
+        // className={style.content}
+      >
+        {children}
+      </div>
+      <Footer />
 
-        </div>
-    )
+    </div>
+  )
 }
 
-export default Layout;
+export default Layout

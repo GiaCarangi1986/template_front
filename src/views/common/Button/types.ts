@@ -1,7 +1,7 @@
-import { ButtonProps } from '@material-ui/core'
+import { ButtonProps as ButtonPropsUI } from '@material-ui/core'
 import { VariantEnum } from '../../../const/styles'
 
-type PropsType = ButtonProps & {
+type ButtonProps = ButtonPropsUI & {
   height?: number;
   view?: keyof typeof VariantEnum;
   withoutEffects?: boolean;
@@ -9,4 +9,4 @@ type PropsType = ButtonProps & {
   transparentBtn?: boolean;
 }
 
-export type { PropsType }
+export type { ButtonProps }

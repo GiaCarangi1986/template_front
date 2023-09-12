@@ -1,6 +1,6 @@
 import { PositionType } from '../../../const/cameras'
 
-type CameraRowPropsType = {
+type CameraRowProps = {
   position: PositionType;
 }
 
@@ -9,4 +9,13 @@ type CameraType = {
   isActive: boolean | undefined;
 }
 
-export type { CameraRowPropsType, CameraType }
+type HeaderTemplateType = {
+  elem: JSX.Element;
+  width: string;
+}
+
+type HeaderType = {
+  template: HeaderTemplateType[];
+}
+
+export type { CameraRowProps, CameraType, HeaderTemplateType, HeaderType }

@@ -1,6 +1,6 @@
 import { VariantEnum } from '../../../const/styles'
 
-type PropsType = {
+type IconProps = {
     children: React.ReactNode;
     width?: number;
     height?: number;
@@ -8,4 +8,4 @@ type PropsType = {
     withoutEffects?: boolean;
 }
 
-export type { PropsType }
+export type { IconProps }

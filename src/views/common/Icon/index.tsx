@@ -1,12 +1,12 @@
 import { FC, CSSProperties } from 'react'
 import cn from 'classnames'
 
-import { PropsType } from './types'
+import { IconProps } from './types'
 import style from './index.module.scss'
 
 const DEFAULT_SIZE = 15
 
-const Icon: FC<PropsType> = ({
+const Icon: FC<IconProps> = ({
   children, width = DEFAULT_SIZE,
   height = DEFAULT_SIZE,
   view = 'dark',

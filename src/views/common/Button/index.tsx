@@ -1,12 +1,12 @@
 import { CSSProperties, FC } from 'react'
 import cn from 'classnames'
 
-import { PropsType } from './types'
+import { ButtonProps } from './types'
 import style from './index.module.scss'
 
 const DEFAULT_HEIGHT = 34
 
-const Button: FC<PropsType> = ({
+const Button: FC<ButtonProps> = ({
   children,
   view = 'dark',
   withoutEffects = false,

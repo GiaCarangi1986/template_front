@@ -2,10 +2,10 @@ import { FC, useEffect, useState } from 'react'
 
 import { CamerasConst } from '../../../const'
 
-import { CameraRowPropsType, CameraType } from './types'
+import { CameraRowProps, CameraType } from './types'
 import style from './index.module.scss'
 
-const CameraRow: FC<CameraRowPropsType> = ({ position }) => {
+const CameraRow: FC<CameraRowProps> = ({ position }) => {
   const [cameras, setCameras] = useState<CameraType[]>([])
 
   useEffect(() => {
