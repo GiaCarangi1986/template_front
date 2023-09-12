@@ -18,6 +18,7 @@ const User = () => {
           </Icon>
         </Button>
       }
+      placement='bottom_end'
     >
       <Navigation />
     </Dropdown>
