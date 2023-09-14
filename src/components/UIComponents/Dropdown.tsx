@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 import cn from 'classnames'
 
 import { CommonUtils } from '../../utils'
@@ -11,21 +11,46 @@ const Dropdown: FC<DropdownProps> = ({
   button,
   placement = 'bottom'
 }) => {
+  const wrapperRef = useRef<HTMLDivElement>(null)
   const [open, setOpen] = useState(false)
 
-  document.onclick = () => setOpen(false)
-  const handleClick = () => setOpen(!open)
+  useEffect(() => {
+    /**
+     * setOpen(false) if clicked on outside of element
+     */
+    function handleClickOutside (event: any) {
+      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+        console.log('wrapperRef.current')
+        setOpen(false)
+      }
+    }
+
+    // Bind the event listener
+    document.addEventListener('click', handleClickOutside)
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener('click', handleClickOutside)
+    }
+  }, [wrapperRef])
+
+  const handleClick = () => {
+    console.log('handleClick')
+    setOpen(!open)
+  }
 
   const placementStyle = CommonUtils.getPlacementStyle(placement)
 
   return (
-    <div style={{ position: 'relative' }} onClick={e=>e.stopPropagation()}>
-      {CommonUtils.addPropsToChildren(button, { onClick: handleClick})}
+    <div
+      ref={wrapperRef}
+      style={{ position: 'relative' }}
+    >
+      {CommonUtils.addPropsToChildren(button, { onClick: handleClick })}
       <div
         className={cn(style.dropdown, { [style.hide]: !open })}
         style={placementStyle}
       >
-        {CommonUtils.addPropsToChildren(children, { onDropdownClick: handleClick})}
+        {CommonUtils.addPropsToChildren(children, { onDropdownClick: handleClick })}
       </div>
     </div>
   )
