@@ -2,7 +2,6 @@ import { PlacementEnum } from '../../const/styles'
 
 type DropdownProps = {
   children: React.ReactNode;
-  id: string;
   button: JSX.Element;
   placement?: keyof typeof PlacementEnum;
 }

@@ -7,6 +7,8 @@ type ButtonProps = ButtonPropsUI & {
   withoutEffects?: boolean;
   iconView?: keyof typeof VariantEnum;
   transparentBtn?: boolean;
+  fullWidth?: boolean;
+  fullClickable?: boolean;
 }
 
 export type { ButtonProps }

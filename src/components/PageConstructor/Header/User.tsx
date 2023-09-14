@@ -1,13 +1,11 @@
 import { Button, Icon } from '../../../views/common'
 import { UserIcon } from '../../../images'
-import Navigation from './Navigation'
-import { CommonConst } from '../../../const'
 import { Dropdown } from '../../UIComponents'
+import UserMenu from './UserMenu'
 
 const User = () => {
   return (
     <Dropdown
-      id={CommonConst.ID.userNavigation}
       button={
         <Button iconView='light' transparentBtn>
           <Icon
@@ -20,7 +18,7 @@ const User = () => {
       }
       placement='bottom_end'
     >
-      <Navigation />
+      <UserMenu/>
     </Dropdown>
   )
 }

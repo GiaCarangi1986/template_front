@@ -8,31 +8,24 @@ import style from './index.module.scss'
 
 const Dropdown: FC<DropdownProps> = ({
   children,
-  id,
   button,
   placement = 'bottom'
 }) => {
   const [open, setOpen] = useState(false)
 
-  document.onclick = function (e: MouseEvent) {
-    const _id = (e.target as HTMLDivElement).id
-    if (id === _id) {
-      setOpen(!open)
-    } else if (open) {
-      setOpen(false)
-    }
-  }
+  document.onclick = () => setOpen(false)
+  const handleClick = () => setOpen(!open)
 
   const placementStyle = CommonUtils.getPlacementStyle(placement)
 
   return (
-    <div style={{ position: 'relative' }}>
-      {CommonUtils.addPropsToChildren(button, { id })}
+    <div style={{ position: 'relative' }} onClick={e=>e.stopPropagation()}>
+      {CommonUtils.addPropsToChildren(button, { onClick: handleClick})}
       <div
         className={cn(style.dropdown, { [style.hide]: !open })}
         style={placementStyle}
       >
-        {children}
+        {CommonUtils.addPropsToChildren(children, { onDropdownClick: handleClick})}
       </div>
     </div>
   )

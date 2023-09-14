@@ -13,6 +13,8 @@ const Button: FC<ButtonProps> = ({
   height= DEFAULT_HEIGHT,
   iconView,
   transparentBtn,
+  fullWidth,
+  fullClickable,
   ...props
 }) => {
   const classNames = cn(style.component, {
@@ -21,6 +23,8 @@ const Button: FC<ButtonProps> = ({
     [style['component__icon_view']]: iconView,
     [style[`component__icon_view_${iconView}`]]: iconView,
     [style['component__transparent']]: transparentBtn,
+    [style['component__full_width']]: fullWidth,
+    [style['component__full_clickable']]: fullClickable,
   })
   return (
     <button

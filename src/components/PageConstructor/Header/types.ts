@@ -1,3 +1,4 @@
+import { MouseEventHandler } from 'react'
 import { PositionType } from '../../../const/cameras'
 
 type CameraRowProps = {
@@ -18,4 +19,8 @@ type HeaderType = {
   template: HeaderTemplateType[];
 }
 
-export type { CameraRowProps, CameraType, HeaderTemplateType, HeaderType }
+type UserMenuProps = {
+  onDropdownClick?: MouseEventHandler<HTMLButtonElement>;
+}
+
+export type { CameraRowProps, CameraType, HeaderTemplateType, HeaderType, UserMenuProps }
