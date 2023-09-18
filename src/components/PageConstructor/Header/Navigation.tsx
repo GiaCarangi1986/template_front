@@ -1,5 +1,5 @@
 import { Button, Icon } from '../../../views/common'
-import { UserIcon } from '../../../images'
+import { ArrowSimpleIcon } from '../../../images'
 import { Dropdown } from '../../UIComponents'
 import UserMenu from './UserMenu'
 
@@ -7,18 +7,20 @@ const Navigation = () => {
   return (
     <Dropdown
       button={
-        <Button iconView='light' transparentBtn>
+        <Button transparentBtn label='Главная' iconView='light' dropdownLabel
+          // onClick={(e)=> console.log('onClick')}
+        >
           <Icon
             height={20}
             width={20}
           >
-            <UserIcon />
+            <ArrowSimpleIcon />
           </Icon>
         </Button>
       }
-      placement='bottom_end'
+      placement='bottom'
     >
-      <UserMenu/>
+      <UserMenu />
     </Dropdown>
   )
 }

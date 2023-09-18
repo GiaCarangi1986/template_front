@@ -20,7 +20,6 @@ const Dropdown: FC<DropdownProps> = ({
      */
     function handleClickOutside (event: any) {
       if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-        console.log('wrapperRef.current')
         setOpen(false)
       }
     }

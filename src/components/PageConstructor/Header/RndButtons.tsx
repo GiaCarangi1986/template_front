@@ -10,7 +10,7 @@ const RndButtons = () => {
       <div className={style.rnd_btns__block}>
         {Object.keys(BlockModuleConst.BLOCKS).map(el => {
           const elem = BlockModuleConst.BLOCKS[el]
-          return <Button key={elem.name} view='light'>{elem.btnLabel}</Button>
+          return <Button key={elem.name} view='light' label={elem.btnLabel}/>
         })}
       </div>
       <Button view='light' iconView='light'>

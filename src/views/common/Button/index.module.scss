@@ -1,9 +1,12 @@
 .component {
   height: var(--height);
   padding: 10px 12px;
-  font-size: 12px;
   border-radius: 5px;
   color: var(--color-white-fff);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     cursor: pointer;
@@ -12,7 +15,6 @@
 
   &__dark {
     background-color: var(--color-blue-85c);
-
   }
 
   &__light {
@@ -76,5 +78,15 @@
     cursor: not-allowed;
     filter: brightness(0.9);
     opacity: 0.5;
+  }
+}
+
+.label {
+  font-size: 12px;
+
+  &__dropdown {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
   }
 }

@@ -9,6 +9,8 @@ type ButtonProps = ButtonPropsUI & {
   transparentBtn?: boolean;
   fullWidth?: boolean;
   fullClickable?: boolean;
+  label?: string;
+  dropdownLabel?: boolean;
 }
 
 export type { ButtonProps }

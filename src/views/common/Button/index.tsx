@@ -10,11 +10,13 @@ const Button: FC<ButtonProps> = ({
   children,
   view = 'dark',
   withoutEffects = false,
-  height= DEFAULT_HEIGHT,
+  height = DEFAULT_HEIGHT,
   iconView,
   transparentBtn,
   fullWidth,
   fullClickable,
+  label,
+  dropdownLabel,
   ...props
 }) => {
   const classNames = cn(style.component, {
@@ -26,6 +28,11 @@ const Button: FC<ButtonProps> = ({
     [style['component__full_width']]: fullWidth,
     [style['component__full_clickable']]: fullClickable,
   })
+
+  const labelClassNames = cn(style.label, {
+    [style['label__dropdown']]: dropdownLabel,
+  })
+
   return (
     <button
       className={classNames}
@@ -34,8 +41,13 @@ const Button: FC<ButtonProps> = ({
       } as CSSProperties}
       {...props}
     >
-    {children}
-  </button>
+      {label && (
+        <p className={labelClassNames}>
+          {label}
+        </p>
+      )}
+      {children}
+    </button>
   )
 }
 

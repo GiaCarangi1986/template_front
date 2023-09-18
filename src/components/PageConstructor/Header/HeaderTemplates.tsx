@@ -15,10 +15,10 @@ const MainHeader: HeaderTemplateType[] = [
     elem: <Cameras />,
     width: 'min-content'
   },
-  // {
-  //   elem: <Navigation />,
-  //   width: 'min-content'
-  // },
+  {
+    elem: <Navigation />,
+    width: 'min-content'
+  },
   {
     elem: <RndButtons />,
     width: '1fr'

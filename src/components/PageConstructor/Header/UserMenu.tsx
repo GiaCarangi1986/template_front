@@ -9,7 +9,7 @@ const UserMenu: FC<UserMenuProps> = ({onDropdownClick = () => null}) => {
   return (
     <div className={style.user_menu__container}>
       <p className={style.user_menu__user}>Иван Андреевич Петров</p>
-      <Button fullWidth onClick={onDropdownClick}>Выйти</Button>
+      <Button fullWidth onClick={onDropdownClick} label='Выйти' />
     </div>
   )
 }

@@ -7,7 +7,7 @@ const User = () => {
   return (
     <Dropdown
       button={
-        <Button iconView='light' transparentBtn>
+        <Button transparentBtn iconView='light'>
           <Icon
             height={20}
             width={20}
