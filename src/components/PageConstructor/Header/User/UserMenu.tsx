@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import { Button } from '../../../views/common'
+import { Button } from '../../../../views/common'
 
 import { UserMenuProps } from './types'
 import style from './index.module.scss'

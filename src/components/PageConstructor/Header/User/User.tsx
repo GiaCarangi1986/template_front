@@ -1,6 +1,6 @@
-import { Button, Icon } from '../../../views/common'
-import { UserIcon } from '../../../images'
-import { Dropdown } from '../../UIComponents'
+import { Dropdown } from '../../../UIComponents'
+import { UserIcon } from '../../../../images'
+import { Button, Icon } from '../../../../views/common'
 import UserMenu from './UserMenu'
 
 const User = () => {
@@ -18,7 +18,7 @@ const User = () => {
       }
       placement='bottom_end'
     >
-      <UserMenu/>
+      <UserMenu />
     </Dropdown>
   )
 }

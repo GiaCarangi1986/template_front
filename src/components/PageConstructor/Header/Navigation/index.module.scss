@@ -1,0 +1,25 @@
+.navigation {
+  display: flex;
+  justify-content: end;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__item {
+    color: var(--color-white-fff);
+    font-size: 12px;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--color-blue-cea);
+    }
+
+    &-active {
+      font-weight: 600;
+      font-size: 13px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.user_menu {
+  &__container {
+    width: max-content;
+  }
+
+  &__user {
+    color: var(--color-white-fff);
+    margin-bottom: 15px;
+  }
+}

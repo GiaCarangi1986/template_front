@@ -43,7 +43,7 @@ const Dropdown: FC<DropdownProps> = ({
     >
       {CommonUtils.addPropsToChildren(button, {
         onClick: handleClick,
-        iconRotate: button.props.dropdownRotate ? open ? 'reverse' : 'normal' : 'normal'
+        iconRotate: button.props.dropdownrotate && open ? 'reverse' : 'normal'
       })}
       <div
         className={cn(style.dropdown, { [style.hide]: !open })}

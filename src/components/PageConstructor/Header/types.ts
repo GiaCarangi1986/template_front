@@ -19,8 +19,4 @@ type HeaderType = {
   template: HeaderTemplateType[];
 }
 
-type UserMenuProps = {
-  onDropdownClick?: MouseEventHandler<HTMLButtonElement>;
-}
-
-export type { CameraRowProps, CameraType, HeaderTemplateType, HeaderType, UserMenuProps }
+export type { CameraRowProps, CameraType, HeaderTemplateType, HeaderType }

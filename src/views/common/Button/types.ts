@@ -12,7 +12,7 @@ type ButtonProps = ButtonPropsUI & {
   label?: string;
   dropdownLabel?: boolean;
   iconRotate?: keyof typeof RotateEnum;
-  dropdownRotate?: boolean;
+  dropdownrotate?: 0 | 1;
 }
 
 export type { ButtonProps }

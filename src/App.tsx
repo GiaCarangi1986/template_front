@@ -11,8 +11,8 @@ const AppWithRouter = () => {
   return (
     <Routes>
       {Object.keys(RouterConst.DESCRIPTION).map((key) => {
-        const elem = RouterConst.DESCRIPTION[key as keyof typeof RouterConst.DESCRIPTION]
-        const PageComponent = PAGE[elem.pageName as keyof typeof PAGE]
+        const elem = RouterConst.DESCRIPTION[key]
+        const PageComponent = PAGE[elem.pageName]
 
         return (
           <Route

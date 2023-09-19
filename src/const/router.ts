@@ -23,12 +23,11 @@ export const DESCRIPTION: Record<string, InfoType> = {
   // service: {
   //   pageName: 'service',
   //   path: '/service',
-  //   btns: CONSTRUCTOR_SERVICE_BTNS,
-  //   rndIds: {
-  //     parentId: ID.service,
-  //     classNameId: CLASSNAME.parentService
-  //   },
+  //   // btns: CONSTRUCTOR_SERVICE_BTNS,
+  //   // rndIds: {
+  //   //   parentId: ID.service,
+  //   //   classNameId: CLASSNAME.parentService
+  //   // },
   //   title: 'Сервис'
   // },
-
 }
