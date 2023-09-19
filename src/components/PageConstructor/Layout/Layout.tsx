@@ -11,7 +11,6 @@ const Layout: FC<LayoutProps> = ({ children, headerTemplate }) => {
     <div className={style.component}>
       <Header template={headerTemplate} />
       <div
-        // className={style.content}
       >
         {children}
       </div>

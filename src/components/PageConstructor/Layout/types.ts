@@ -1,4 +1,4 @@
-import { HeaderTemplateType } from '../Header/types'
+import { HeaderTemplateType } from '../Header/Header/types'
 
 type LayoutProps = {
     children: React.ReactNode;

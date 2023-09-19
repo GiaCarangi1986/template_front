@@ -10,13 +10,4 @@ type CameraType = {
   isActive: boolean | undefined;
 }
 
-type HeaderTemplateType = {
-  elem: JSX.Element;
-  width: string;
-}
-
-type HeaderType = {
-  template: HeaderTemplateType[];
-}
-
-export type { CameraRowProps, CameraType, HeaderTemplateType, HeaderType }
+export type { CameraRowProps, CameraType }

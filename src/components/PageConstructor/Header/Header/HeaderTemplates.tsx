@@ -1,8 +1,8 @@
-import Logo from './Logo'
-import Cameras from './Cameras'
-import RndButtons from './RndButtons'
-import User from './User'
-import Navigation from './Navigation'
+import Logo from '../Logo'
+import Cameras from '../Cameras'
+import RndButtons from '../RndButtons'
+import User from '../User'
+import Navigation from '../Navigation'
 
 import { HeaderTemplateType } from './types'
 
