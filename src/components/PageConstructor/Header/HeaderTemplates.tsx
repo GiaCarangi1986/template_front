@@ -17,11 +17,11 @@ const MainHeader: HeaderTemplateType[] = [
   },
   {
     elem: <Navigation />,
-    width: 'min-content'
+    width: 'auto'
   },
   {
     elem: <RndButtons />,
-    width: '1fr'
+    width: 'minmax(250px, max-content)'
   },
   {
     elem: <User />,

@@ -1,5 +1,5 @@
 import { ButtonProps as ButtonPropsUI } from '@material-ui/core'
-import { VariantEnum } from '../../../const/styles'
+import { RotateEnum, VariantEnum } from '../../../const/styles'
 
 type ButtonProps = ButtonPropsUI & {
   height?: number;
@@ -11,6 +11,8 @@ type ButtonProps = ButtonPropsUI & {
   fullClickable?: boolean;
   label?: string;
   dropdownLabel?: boolean;
+  iconRotate?: keyof typeof RotateEnum;
+  dropdownRotate?: boolean;
 }
 
 export type { ButtonProps }

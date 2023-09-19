@@ -1,5 +1,6 @@
 import React from 'react'
-import { PlacementStyleType } from '../components/UIComponents/types'
+import { PlacementStyleType } from '../components/UIComponents/Dropdown/types'
+import { RotateEnum } from '../const/styles'
 
 const addPropsToReactElement = (element: React.ReactNode, props: any) => {
   if (React.isValidElement(element)) {
@@ -74,4 +75,29 @@ export const getPlacementStyle = (placement: 'top_start' | 'top' | 'top_end' | '
       break
   }
   return placementStyle
+}
+
+type RotateStyleType = {
+  transform?: string;
+}
+
+export const getRotateStyle = (rotate: 'right' | 'left' | 'reverse' | 'normal' | undefined) => {
+  let rotateStyle: RotateStyleType = {}
+
+  switch (rotate) {
+    case 'right':
+      rotateStyle = { transform: 'rotate(90deg)' }
+      break
+    case 'reverse':
+      rotateStyle = { transform: 'rotate(180deg)' }
+      break
+    case 'left':
+      rotateStyle = { transform: 'rotate(-90deg)' }
+      break
+    case 'normal':
+      rotateStyle = { transform: 'rotate(0deg)' }
+      break
+  }
+
+  return rotateStyle
 }

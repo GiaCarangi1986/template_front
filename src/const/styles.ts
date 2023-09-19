@@ -18,4 +18,10 @@ export enum PlacementEnum {
   right_end = 'right_end',
 }
 
+export enum RotateEnum {
+  right = 'right',
+  left = 'left',
+  reverse = 'reverse',
+  normal = 'normal'
+}
 

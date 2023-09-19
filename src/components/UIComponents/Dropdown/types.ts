@@ -1,4 +1,4 @@
-import { PlacementEnum } from '../../const/styles'
+import { PlacementEnum } from '../../../const/styles'
 
 type DropdownProps = {
   children: React.ReactNode;

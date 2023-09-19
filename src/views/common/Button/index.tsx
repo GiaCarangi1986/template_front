@@ -1,6 +1,8 @@
 import { CSSProperties, FC } from 'react'
 import cn from 'classnames'
 
+import { CommonUtils } from '../../../utils'
+
 import { ButtonProps } from './types'
 import style from './index.module.scss'
 
@@ -17,6 +19,7 @@ const Button: FC<ButtonProps> = ({
   fullClickable,
   label,
   dropdownLabel,
+  iconRotate,
   ...props
 }) => {
   const classNames = cn(style.component, {
@@ -46,7 +49,7 @@ const Button: FC<ButtonProps> = ({
           {label}
         </p>
       )}
-      {children}
+      {CommonUtils.addPropsToChildren(children, { rotate: iconRotate })}
     </button>
   )
 }

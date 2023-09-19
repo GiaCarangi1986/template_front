@@ -1,7 +1,7 @@
 import { FC, useEffect, useRef, useState } from 'react'
 import cn from 'classnames'
 
-import { CommonUtils } from '../../utils'
+import { CommonUtils } from '../../../utils'
 
 import { DropdownProps } from './types'
 import style from './index.module.scss'
@@ -32,10 +32,7 @@ const Dropdown: FC<DropdownProps> = ({
     }
   }, [wrapperRef])
 
-  const handleClick = () => {
-    console.log('handleClick')
-    setOpen(!open)
-  }
+  const handleClick = () => setOpen(!open)
 
   const placementStyle = CommonUtils.getPlacementStyle(placement)
 
@@ -44,7 +41,10 @@ const Dropdown: FC<DropdownProps> = ({
       ref={wrapperRef}
       style={{ position: 'relative' }}
     >
-      {CommonUtils.addPropsToChildren(button, { onClick: handleClick })}
+      {CommonUtils.addPropsToChildren(button, {
+        onClick: handleClick,
+        iconRotate: button.props.dropdownRotate ? open ? 'reverse' : 'normal' : 'normal'
+      })}
       <div
         className={cn(style.dropdown, { [style.hide]: !open })}
         style={placementStyle}
