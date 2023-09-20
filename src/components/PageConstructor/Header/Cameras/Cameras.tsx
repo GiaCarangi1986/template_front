@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react'
 
-import { CamerasConst } from '../../../const'
+import { CamerasConst } from '../../../../const'
 
 import { CameraRowProps, CameraType } from './types'
 import style from './index.module.scss'

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import { RouterConst } from './const'
-import Main from './pages/Main'
+import { Main } from './pages'
 
 const AppWithRouter = () => {
   const PAGE = {

@@ -1,6 +1,6 @@
-import { Button, Icon } from '../../../views/common'
-import { BlockModuleConst } from '../../../const'
-import { DefaultStateIcon } from '../../../images'
+import { Button, Icon } from '../../../../views/common'
+import { BlockModuleConst } from '../../../../const'
+import { DefaultStateIcon } from '../../../../images'
 
 import style from './index.module.scss'
 
@@ -10,7 +10,7 @@ const RndButtons = () => {
       <div className={style.rnd_btns__block}>
         {Object.keys(BlockModuleConst.BLOCKS).map(el => {
           const elem = BlockModuleConst.BLOCKS[el]
-          return <Button key={elem.name} view='light' label={elem.btnLabel}/>
+          return <Button key={elem.name} view='light' label={elem.btnLabel} />
         })}
       </div>
       <Button view='light' iconView='light'>

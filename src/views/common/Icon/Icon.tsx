@@ -26,8 +26,8 @@ const Icon: FC<IconProps> = ({
       className={classNames}
       style={
         {
-        '--width': `${width}px`,
-        '--height': `${height}px`,
+          '--width': `${width}px`,
+          '--height': `${height}px`,
           ...rotateStyle
         } as CSSProperties
       }

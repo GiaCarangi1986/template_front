@@ -1,13 +1,10 @@
-import { MouseEventHandler } from 'react'
-import { PositionType } from '../../../const/cameras'
-
-type CameraRowProps = {
-  position: PositionType;
+type HeaderTemplateType = {
+  elem: JSX.Element;
+  width: string;
 }
 
-type CameraType = {
-  positionNumber: number;
-  isActive: boolean | undefined;
+type HeaderType = {
+  template: HeaderTemplateType[];
 }
 
-export type { CameraRowProps, CameraType }
+export type { HeaderTemplateType, HeaderType }

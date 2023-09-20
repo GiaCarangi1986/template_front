@@ -1,39 +1,11 @@
-.logo {
-  display: flex;
-  gap: 10px;
-}
+.component {
+  padding-top: 10px;
+  padding-bottom: 10px;
 
-.cameras {
   display: grid;
-  grid-template-columns: repeat(4, 22px);
-  grid-template-rows: repeat(2, 22px);
-  gap: 3px;
+  grid-template-rows: 100%;
+  column-gap: 25px;
   align-items: center;
-  justify-items: center;
-}
 
-.camera_row {
-  border-radius: 50%;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--color-white-fff);
-  font-size: 10px;
-}
-
-.rnd_btns {
-  display: flex;
-  gap: 15px;
-  justify-content: end;
-  overflow: auto;
-
-  &__block {
-    overflow: auto;
-    white-space: nowrap;
-
-    display: flex;
-    gap: 10px;
-  }
+  border-bottom: 1px solid var(--color-blue-691);
 }

@@ -1,0 +1,14 @@
+.rnd_btns {
+  display: flex;
+  gap: 15px;
+  justify-content: end;
+  overflow: auto;
+
+  &__block {
+    overflow: auto;
+    white-space: nowrap;
+
+    display: flex;
+    gap: 10px;
+  }
+}

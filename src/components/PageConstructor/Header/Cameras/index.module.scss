@@ -1,0 +1,19 @@
+.camera_row {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white-fff);
+  font-size: 10px;
+}
+
+.cameras {
+  display: grid;
+  grid-template-columns: repeat(4, 22px);
+  grid-template-rows: repeat(2, 22px);
+  gap: 3px;
+  align-items: center;
+  justify-items: center;
+}
