@@ -37,7 +37,10 @@ const Main = () => {
                 position: 'relative'
               }}
             >
-              <ContainerRND backgroundColor={elem.backgroundColor ?? ''}>
+              <ContainerRND
+                backgroundColor={elem.backgroundColor ?? ''}
+                bounds={CommonConst.CLASSNAME.mainPageParentRND}
+              >
                 {module}
               </ContainerRND>
 

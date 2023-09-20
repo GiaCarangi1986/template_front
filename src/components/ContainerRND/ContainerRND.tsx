@@ -6,7 +6,7 @@ import { setZIndex } from '../../utils/rnd'
 
 import { ContainerRNDProps } from './types'
 
-const ContainerRND: FC<ContainerRNDProps> = ({ children, backgroundColor }) => {
+const ContainerRND: FC<ContainerRNDProps> = ({ children, backgroundColor, bounds }) => {
   return (
     <Rnd
       default={{
@@ -20,6 +20,9 @@ const ContainerRND: FC<ContainerRNDProps> = ({ children, backgroundColor }) => {
       onDragStart={(e, data) => {
         data.node.style.zIndex = setZIndex();
       }}
+      dragGrid={[5, 5]}
+      resizeGrid={[5, 5]}
+      bounds={`.${bounds}`}
     >
       {children}
     </Rnd>
