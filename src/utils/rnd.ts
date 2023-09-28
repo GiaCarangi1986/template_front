@@ -1,7 +1,7 @@
 import { CommonConst } from '../const'
 
 export const setZIndex = () => {
-  const elems: any = document.getElementsByClassName(CommonConst.CLASSNAME.headerRND)
+  const elems: any = document.getElementsByClassName(CommonConst.CLASSNAME.containerRND)
   const arr: any[] = Array.from(elems)
   arr.sort((a: any, b: any) => a.style.zIndex - b.style.zIndex)
   for (let i = 0; i < arr.length - 1; i++) {

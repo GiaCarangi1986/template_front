@@ -2,9 +2,9 @@ import cn from 'classnames'
 
 import { CommonConst, BlockModuleConst } from '../../../const'
 import CoilTable from './CoilTable'
-import style from './index.module.scss'
-
 import ContainerRND from '../../ContainerRND'
+
+import style from './index.module.scss'
 
 const Main = () => {
   const MODULES: Record<string, JSX.Element> = {
@@ -40,6 +40,8 @@ const Main = () => {
               <ContainerRND
                 backgroundColor={elem.backgroundColor ?? ''}
                 bounds={CommonConst.CLASSNAME.mainPageParentRND}
+                name={elem.name}
+                headerLabel={elem.headerLabel}
               >
                 {module}
               </ContainerRND>
