@@ -3,6 +3,7 @@ import {BlockModuleConst} from '../../../../const'
 import {DefaultStateIcon} from '../../../../images'
 import {useAppDispatch, useAppSelector} from '../../../../store/hooks'
 import {mainWidgetsStore} from '../../../../store/reducer/mainWidgets'
+import {RNDUtils} from "../../../../utils";
 
 import style from './index.module.scss'
 
@@ -12,15 +13,7 @@ const RndButtons = () => {
     const {handleShow} = mainWidgetsStore.actions;
 
     const handleClick = (name: string) => {
-        dispatch(handleShow(btns.map(btn => {
-            if (btn.name === name) {
-                return {
-                    ...btn,
-                    show: !btn.show
-                }
-            }
-            return btn
-        })))
+        dispatch(handleShow(RNDUtils.handleShowModal(name, btns)))
     }
 
     return (

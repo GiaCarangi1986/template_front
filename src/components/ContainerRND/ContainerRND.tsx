@@ -24,11 +24,12 @@ const ContainerRND: FC<ContainerRNDProps> = ({
                                                  headerLabel,
                                                  variant
                                              }) => {
+    const btns = useAppSelector((state) => state.mainWidgets)
+
     const [block, setBlock] = useState<BlockRndType>(INIT_RECT)
     const [active, setActive] = useState(false)
     const handleActive = () => setActive(!active)
 
-    const btns = useAppSelector((state) => state.mainWidgets)
     const modal = btns.find(el => el.name === name)
 
     return (
@@ -66,7 +67,7 @@ const ContainerRND: FC<ContainerRNDProps> = ({
             onMouseDown={() => console.log('onClick')}
         >
             <>
-                <HeaderRND label={headerLabel}/>
+                <HeaderRND label={headerLabel} name={name}/>
                 <div className={style.body}>{children}</div>
             </>
         </Rnd>
