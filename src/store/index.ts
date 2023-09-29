@@ -1,19 +1,21 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit'
+import {combineReducers, configureStore} from '@reduxjs/toolkit'
 
 import mainWidgetsReducer from './reducer/mainWidgets'
+import initGridWidgetsReducer from "./reducer/initGridWidgets";
 
 const rootReducer = combineReducers({
-  mainWidgets: mainWidgetsReducer
+    mainWidgets: mainWidgetsReducer,
+    initGridWidgets: initGridWidgetsReducer
 })
 
 export const setupStore = () => {
-  return configureStore({
-    reducer: rootReducer
-  })
+    return configureStore({
+        reducer: rootReducer
+    })
 }
 
 type RootState = ReturnType<typeof rootReducer>
 type AppStore = ReturnType<typeof setupStore>
 type AppDispatch = AppStore['dispatch']
 
-export type { RootState, AppStore, AppDispatch }
+export type {RootState, AppStore, AppDispatch}

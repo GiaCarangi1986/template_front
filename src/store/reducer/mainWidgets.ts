@@ -20,13 +20,13 @@ const getInitState = () => {
 const initialState: MainWidgetsType[] = getInitState()
 
 export const mainWidgetsStore = createSlice({
-    name: CommonConst.STORE_NAMES.MAIN_WIDGETES,
+    name: CommonConst.STORE_NAMES.MAIN_WIDGETS,
     initialState,
     reducers: {
-        init: () => {
+        initDisplay: () => {
             return getInitState()
         },
-        handleShow: (state, action: PayloadAction<MainWidgetsType[]>) => {
+        handleShow: (_state, action: PayloadAction<MainWidgetsType[]>) => {
             return [...action.payload]
         }
     }

@@ -4,16 +4,22 @@ import {DefaultStateIcon} from '../../../../images'
 import {useAppDispatch, useAppSelector} from '../../../../store/hooks'
 import {mainWidgetsStore} from '../../../../store/reducer/mainWidgets'
 import {RNDUtils} from "../../../../utils";
+import {initGridWidgetsStore} from "../../../../store/reducer/initGridWidgets";
 
 import style from './index.module.scss'
 
 const RndButtons = () => {
     const btns = useAppSelector((state) => state.mainWidgets)
     const dispatch = useAppDispatch();
-    const {handleShow} = mainWidgetsStore.actions;
+    const {handleShow, initDisplay} = mainWidgetsStore.actions;
+    const {setInitState} = initGridWidgetsStore.actions;
 
-    const handleClick = (name: string) => {
+    const handleClickModule = (name: string) => {
         dispatch(handleShow(RNDUtils.handleShowModal(name, btns)))
+    }
+    const handleClickInitGrid = () => {
+        dispatch(setInitState())
+        dispatch(initDisplay())
     }
 
     return (
@@ -22,16 +28,15 @@ const RndButtons = () => {
                 {Object.keys(BlockModuleConst.BLOCKS).map(el => {
                     const elem = BlockModuleConst.BLOCKS[el]
                     const itemBtn = btns.find(item => item.name === elem.name)
-                    const view = itemBtn?.show ? 'light' : 'dark'
                     return <Button
                         key={elem.name}
-                        view={view}
+                        view={itemBtn?.show ? 'light' : 'lightReverse'}
                         label={elem.btnLabel}
-                        onClick={() => handleClick(elem.name)}
+                        onClick={() => handleClickModule(elem.name)}
                     />
                 })}
             </div>
-            <Button view='light' iconView='light'>
+            <Button view='light' iconView='light' onClick={handleClickInitGrid}>
                 <Icon><DefaultStateIcon/></Icon>
             </Button>
         </div>
