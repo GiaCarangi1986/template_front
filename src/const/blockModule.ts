@@ -14,7 +14,7 @@ export const BLOCKS: Record<string, BlockType> = {
     name: 'coils',
     headerLabel: 'Рулоны',
     btnLabel: 'Рулоны табл.',
-    'grid-column': '1 / 6',
+    'grid-column': '1 / 7',
     'grid-row': '1 / 6',
     variant: 'dark'
   },
@@ -22,7 +22,7 @@ export const BLOCKS: Record<string, BlockType> = {
     name: 'aboutDefect',
     headerLabel: 'Информация по дефекту',
     btnLabel: 'О дефекте',
-    'grid-column': '1 / 6',
+    'grid-column': '1 / 7',
     'grid-row': '6 / 9',
     variant: 'light'
   },
@@ -30,7 +30,7 @@ export const BLOCKS: Record<string, BlockType> = {
     name: 'aboutCoil',
     headerLabel: 'Информация по рулону',
     btnLabel: 'О рулоне',
-    'grid-column': '6 / 10',
+    'grid-column': '7 / 11',
     'grid-row': '6 / 9',
     variant: 'light'
   },
@@ -38,7 +38,7 @@ export const BLOCKS: Record<string, BlockType> = {
     name: 'map',
     headerLabel: 'Карта дефектов',
     btnLabel: 'Карта дефектов',
-    'grid-column': '1 / 10',
+    'grid-column': '1 / 11',
     'grid-row': '-1 / -7',
     variant: 'dark'
   },
@@ -46,7 +46,7 @@ export const BLOCKS: Record<string, BlockType> = {
     name: 'cameras',
     headerLabel: 'Камеры',
     btnLabel: 'Камеры',
-    'grid-column': '6 / 10',
+    'grid-column': '7 / 11',
     'grid-row': '1 / 3',
     variant: 'light'
   },
@@ -54,7 +54,7 @@ export const BLOCKS: Record<string, BlockType> = {
     name: 'defectKinds',
     headerLabel: 'Типы дефектов',
     btnLabel: 'Типы дефектов',
-    'grid-column': '6 / 10',
+    'grid-column': '7 / 11',
     'grid-row': '3 / 6',
     variant: 'light'
   },
@@ -62,7 +62,7 @@ export const BLOCKS: Record<string, BlockType> = {
     name: 'photo',
     headerLabel: 'Фото',
     btnLabel: 'Фотография',
-    'grid-column': '10 / -3',
+    'grid-column': '11 / -3',
     'grid-row': '1 / -1',
     variant: 'dark'
   },

@@ -23,6 +23,9 @@
   background-color: var(--color-blue-691);
   padding: 5px 10px;
   border-bottom: 1px solid var(--color-white-fff);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   &:hover {
     cursor: grab;
