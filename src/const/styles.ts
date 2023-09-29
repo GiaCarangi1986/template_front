@@ -1,6 +1,8 @@
 export enum VariantEnum {
   dark = 'dark',
   light = 'light',
+  darkReverse = 'darkReverse',
+  lightReverse = 'lightReverse',
 }
 
 export enum PlacementEnum {

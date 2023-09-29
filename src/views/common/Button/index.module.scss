@@ -21,6 +21,15 @@
     background-color: var(--color-blue-691);
   }
 
+  &__darkReverse {
+    background-color: var(--color-gray-2d2);
+  }
+
+  &__lightReverse {
+    background-color: var(--color-white-opacity12);
+    //opacity: 0.8;
+  }
+
   &__without_effects {
     pointer-events: none;
   }
