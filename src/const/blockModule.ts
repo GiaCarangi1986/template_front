@@ -1,10 +1,12 @@
+import { VariantEnum } from './styles'
+
 type BlockType = {
   name: string;
   headerLabel: string;
   btnLabel: string;
   'grid-column'?: string;
   'grid-row'?: string;
-  backgroundColor?: string;
+  variant: keyof typeof VariantEnum;
 }
 
 export const BLOCKS: Record<string, BlockType> = {
@@ -14,7 +16,7 @@ export const BLOCKS: Record<string, BlockType> = {
     btnLabel: 'Рулоны табл.',
     'grid-column': '1 / 6',
     'grid-row': '1 / 6',
-    backgroundColor: 'red'
+    variant: 'dark'
   },
   aboutDefect: {
     name: 'aboutDefect',
@@ -22,7 +24,7 @@ export const BLOCKS: Record<string, BlockType> = {
     btnLabel: 'О дефекте',
     'grid-column': '1 / 6',
     'grid-row': '6 / 9',
-    backgroundColor: 'orange'
+    variant: 'light'
   },
   aboutCoil: {
     name: 'aboutCoil',
@@ -30,7 +32,7 @@ export const BLOCKS: Record<string, BlockType> = {
     btnLabel: 'О рулоне',
     'grid-column': '6 / 10',
     'grid-row': '6 / 9',
-    backgroundColor: 'green'
+    variant: 'light'
   },
   map: {
     name: 'map',
@@ -38,7 +40,7 @@ export const BLOCKS: Record<string, BlockType> = {
     btnLabel: 'Карта дефектов',
     'grid-column': '1 / 10',
     'grid-row': '-1 / -7',
-    backgroundColor: 'yellow'
+    variant: 'dark'
   },
   cameras: {
     name: 'cameras',
@@ -46,7 +48,7 @@ export const BLOCKS: Record<string, BlockType> = {
     btnLabel: 'Камеры',
     'grid-column': '6 / 10',
     'grid-row': '1 / 3',
-    backgroundColor: 'pink'
+    variant: 'light'
   },
   defectKinds: {
     name: 'defectKinds',
@@ -54,7 +56,7 @@ export const BLOCKS: Record<string, BlockType> = {
     btnLabel: 'Типы дефектов',
     'grid-column': '6 / 10',
     'grid-row': '3 / 6',
-    backgroundColor: 'brown'
+    variant: 'light'
   },
   photo: {
     name: 'photo',
@@ -62,7 +64,7 @@ export const BLOCKS: Record<string, BlockType> = {
     btnLabel: 'Фотография',
     'grid-column': '10 / -3',
     'grid-row': '1 / -1',
-    backgroundColor: 'black'
+    variant: 'dark'
   },
   snapshots: {
     name: 'snapshots',
@@ -70,7 +72,7 @@ export const BLOCKS: Record<string, BlockType> = {
     btnLabel: 'Снимки',
     'grid-column': '-1 / -3',
     'grid-row': '1 / -6',
-    backgroundColor: 'white'
+    variant: 'light'
   },
   snapshotsInfo: {
     name: 'snapshotsInfo',
@@ -78,6 +80,6 @@ export const BLOCKS: Record<string, BlockType> = {
     btnLabel: 'Кадр',
     'grid-column': '-1 / -3',
     'grid-row': '-1 / -6',
-    backgroundColor: 'blue'
+    variant: 'light'
   }
 }

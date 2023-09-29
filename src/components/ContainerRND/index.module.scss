@@ -9,11 +9,20 @@
   &_active {
     box-shadow: 0 0 8px 5px var(--color-black-000);
   }
+
+  &_light {
+    background-color: var(--color-blue-691);
+  }
+
+  &_dark {
+    background-color: var(--color-blue-85c);
+  }
 }
 
 .header {
   background-color: var(--color-blue-691);
   padding: 5px 10px;
+  border-bottom: 1px solid var(--color-white-fff);
 
   &:hover {
     cursor: grab;
@@ -21,6 +30,9 @@
 
   &__label {
     cursor: default;
+    color: var(--color-white-fff);
+    font-size: 14px;
+    line-height: 17px;
   }
 }
 

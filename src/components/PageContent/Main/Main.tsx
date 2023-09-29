@@ -38,7 +38,7 @@ const Main = () => {
               }}
             >
               <ContainerRND
-                backgroundColor={elem.backgroundColor ?? ''}
+                variant={elem.variant}
                 bounds={CommonConst.CLASSNAME.mainPageParentRND}
                 name={elem.name}
                 headerLabel={elem.headerLabel}

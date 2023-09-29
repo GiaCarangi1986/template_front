@@ -18,10 +18,10 @@ const INIT_RECT: BlockRndType = {
 
 const ContainerRND: FC<ContainerRNDProps> = ({
   children,
-  backgroundColor,
   bounds,
   name,
-  headerLabel
+  headerLabel,
+  variant
 }) => {
   const [block, setBlock] = useState<BlockRndType>(INIT_RECT)
   const [active, setActive] = useState(false)
@@ -31,8 +31,10 @@ const ContainerRND: FC<ContainerRNDProps> = ({
   return (
     <Rnd
       default={INIT_RECT}
-      style={{ backgroundColor }}
-      className={cn(CommonConst.CLASSNAME.containerRND, style.container, { [style.container_active]: active })}
+      className={cn(CommonConst.CLASSNAME.containerRND, style.container, {
+        [style.container_active]: active,
+        [style[`container_${variant}`]]: variant
+      })}
       onResizeStart={(e, dir, data) => {
         data.style.zIndex = setZIndex()
       }}

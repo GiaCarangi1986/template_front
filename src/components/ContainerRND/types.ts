@@ -1,9 +1,11 @@
+import { VariantEnum } from '../../const/styles'
+
 type ContainerRNDProps = {
   children: React.ReactNode;
-  backgroundColor?: string;
   bounds:  string | Element;
   name: string;
   headerLabel: string;
+  variant: keyof typeof VariantEnum;
 }
 
 type BlockRndType = {
