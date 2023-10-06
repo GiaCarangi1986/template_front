@@ -1,7 +1,9 @@
+import Table from "../../../UIComponents/TableWindow";
+
 const CoilTable = () => {
-  return (
-    <div>Coil table</div>
-  )
+    return (
+        <Table/>
+    )
 }
 
 export default CoilTable
