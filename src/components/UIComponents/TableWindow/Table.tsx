@@ -3,7 +3,7 @@ import AutoSizer from "react-virtualized-auto-sizer";
 import {VariableSizeTree as Tree, VariableSizeNodeComponentProps, VariableSizeNodeData} from 'react-vtree';
 import useScrollbarSize from 'react-scrollbar-size';
 
-import {TableWindowContext} from "../../../contexts/table";
+import {Contexts} from '../../../helpers'
 
 import {TableProps} from "./types";
 
@@ -98,7 +98,7 @@ const Node: FC<VariableSizeNodeComponentProps<VariableSizeNodeData & DataType>> 
     const {isLeaf, name} = data
     const {
         RowRender
-    } = useContext(TableWindowContext);
+    } = useContext(Contexts.TableContext.TableWindowContext);
     return (
         <div style={{...style, width: 'max-content'}}>
             {!isLeaf && (
@@ -118,7 +118,7 @@ const Table: FC<TableProps> = ({HeaderRender, RowRender}) => {
         <AutoSizer>
             {({height, width}) => (
                 <div style={{width: 'max-content', overflow: 'auto'}}>
-                    <TableWindowContext.Provider value={{RowRender, HeaderRender}}>
+                    <Contexts.TableContext.TableWindowContext.Provider value={{RowRender, HeaderRender}}>
                         <div style={{height: `${fixH}px`, position: 'sticky', width: 'max-content'}}>
                             <HeaderRender/>
                         </div>
@@ -126,7 +126,7 @@ const Table: FC<TableProps> = ({HeaderRender, RowRender}) => {
                               style={{overflow: 'initial'}}>
                             {Node}
                         </Tree>
-                    </TableWindowContext.Provider>
+                    </Contexts.TableContext.TableWindowContext.Provider>
                 </div>
             )}
         </AutoSizer>

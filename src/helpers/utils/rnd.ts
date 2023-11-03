@@ -1,6 +1,6 @@
-import {CommonConst} from '../const'
+import {CommonConst} from '../../const'
 
-import {MainWidgetsType} from "../store/reducer/mainWidgets";
+import {MainWidgetsType} from "../../store/reducer/mainWidgets";
 
 export const setZIndex = () => {
     const elems: any = document.getElementsByClassName(CommonConst.CLASSNAME.containerRND)

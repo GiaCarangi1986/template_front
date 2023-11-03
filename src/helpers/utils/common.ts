@@ -1,5 +1,5 @@
 import React from 'react'
-import {PlacementStyleType} from '../components/UIComponents/Dropdown/types'
+import {PlacementStyleType} from '../../components/UIComponents/Dropdown/types'
 
 const addPropsToReactElement = (element: React.ReactNode, props: any) => {
     if (React.isValidElement(element)) {

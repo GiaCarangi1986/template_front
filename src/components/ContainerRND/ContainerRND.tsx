@@ -3,7 +3,7 @@ import {Rnd} from 'react-rnd'
 import cn from 'classnames'
 
 import {CommonConst} from '../../const'
-import {setZIndex} from '../../utils/rnd'
+import {setZIndex} from '../../helpers/utils/rnd'
 import HeaderRND from './HeaderRND'
 import {useAppDispatch, useAppSelector} from "../../store/hooks";
 

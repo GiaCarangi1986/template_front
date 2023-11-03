@@ -3,7 +3,7 @@ import {BlockModuleConst} from '../../../../const'
 import {DefaultStateIcon} from '../../../../images'
 import {useAppDispatch, useAppSelector} from '../../../../store/hooks'
 import {mainWidgetsStore} from '../../../../store/reducer/mainWidgets'
-import {RNDUtils} from "../../../../utils";
+import {RNDUtils} from "../../../../helpers/utils";
 import {initGridWidgetsStore} from "../../../../store/reducer/initGridWidgets";
 
 import style from './index.module.scss'

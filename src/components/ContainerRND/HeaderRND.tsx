@@ -4,7 +4,7 @@ import cn from 'classnames'
 import {CommonConst} from '../../const'
 import {Button, Icon} from '../../views/common'
 import {CloseIcon} from '../../images'
-import {RNDUtils} from "../../utils";
+import {RNDUtils} from "../../helpers/utils";
 import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import {mainWidgetsStore} from "../../store/reducer/mainWidgets";
 
