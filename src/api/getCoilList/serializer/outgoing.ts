@@ -11,10 +11,10 @@ type CoilListSendingBodyType = {
 };
 
 type CoilListSendingType = ListSendingCommonType & {
-    dateStart: string;
-    dateEnd: string;
-    ordering: string;
-    searchId: string;
+    dateStart?: string;
+    dateEnd?: string;
+    ordering?: string;
+    searchId?: string;
 };
 
 type CoilListSendingServerFormatType = {

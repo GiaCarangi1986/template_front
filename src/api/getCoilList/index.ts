@@ -16,11 +16,11 @@ export const getCoilList = async (data: CoilListSendingType) => {
     const {qsData, bodyData} = outgoing.coilList(data);
 
     const res = await fetch(`${MAIN_URL}/coils/search/?${qs.stringify(qsData)}`, {
+        method: 'POST',
         headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json'
         },
-        method: 'POST',
         body: JSON.stringify(bodyData)
     })
 
