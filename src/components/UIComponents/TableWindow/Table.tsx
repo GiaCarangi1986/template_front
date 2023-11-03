@@ -1,7 +1,11 @@
-import {FC} from "react";
+import {FC, useContext} from "react";
 import AutoSizer from "react-virtualized-auto-sizer";
 import {VariableSizeTree as Tree, VariableSizeNodeComponentProps, VariableSizeNodeData} from 'react-vtree';
 import useScrollbarSize from 'react-scrollbar-size';
+
+import {TableWindowContext} from "../../../contexts/table";
+
+import {TableProps} from "./types";
 
 type TreeType = {
     name: string,
@@ -92,6 +96,9 @@ const Node: FC<VariableSizeNodeComponentProps<VariableSizeNodeData & DataType>> 
                                                                                        // ...props
                                                                                    }) => {
     const {isLeaf, name} = data
+    const {
+        RowRender
+    } = useContext(TableWindowContext);
     return (
         <div style={{...style, width: 'max-content'}}>
             {!isLeaf && (
@@ -99,22 +106,27 @@ const Node: FC<VariableSizeNodeComponentProps<VariableSizeNodeData & DataType>> 
                     {isOpen ? '-' : '+'}
                 </button>
             )}
-            <div>{`${name}${name}${name}${name}${name}${name}${name}${name}${name}${name}${name}${name}${name}${name}${name}${name}${name}${name}${name}${name}`}</div>
+            <div><RowRender name={name}/></div>
         </div>
     )
 };
 
-const Table = () => {
+const Table: FC<TableProps> = ({HeaderRender, RowRender}) => {
     const {height: hs} = useScrollbarSize();
-    console.log('hs', hs)
+    const fixH = 20
     return (
         <AutoSizer>
             {({height, width}) => (
                 <div style={{width: 'max-content', overflow: 'auto'}}>
-                    <div style={{height: '20px', position: 'sticky', width: 'max-content'}}>header</div>
-                    <Tree treeWalker={treeWalker} height={height - 20 - hs} width={width} style={{overflow: 'initial'}}>
-                        {Node}
-                    </Tree>
+                    <TableWindowContext.Provider value={{RowRender, HeaderRender}}>
+                        <div style={{height: `${fixH}px`, position: 'sticky', width: 'max-content'}}>
+                            <HeaderRender/>
+                        </div>
+                        <Tree treeWalker={treeWalker} height={height - fixH - hs} width={width}
+                              style={{overflow: 'initial'}}>
+                            {Node}
+                        </Tree>
+                    </TableWindowContext.Provider>
                 </div>
             )}
         </AutoSizer>
