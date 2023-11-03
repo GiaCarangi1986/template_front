@@ -100,3 +100,14 @@ export const getRotateStyle = (rotate: 'right' | 'left' | 'reverse' | 'normal' |
 
     return rotateStyle
 }
+
+export const roundDigit = (digit: number, numberChar = 2) => {
+    let oneWithZeros = 1;
+    for (let i = 0; i < numberChar; i++) {
+        oneWithZeros *= 10;
+    }
+    return Math.round(digit * oneWithZeros) / oneWithZeros;
+};
+
+export const convertMillimeterIntoMeter = (mmVal: number | undefined | null) =>
+    mmVal ? roundDigit(mmVal / 1000) : 0;

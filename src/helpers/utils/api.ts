@@ -1,3 +1,5 @@
+import {IS_MOCK_BY_SYSTEM} from "../../api";
+
 export const responseProcessing = async (
     res: Response,
     serFunc?: (data: any) => any
@@ -7,30 +9,25 @@ export const responseProcessing = async (
             throw new Error(text)
         })
     } else {
-        
+        const resJson = await res.json();
+        if (serFunc) {
+            return serFunc(resJson)
+        }
+        return resJson
     }
+};
 
-    // let resData: Response = res;
-    // try {
-    //     resData = await res.json();
-    // } finally {
-    //     if (!res?.ok) {
-    //         const err = res.te;
-    //         throw new Error(err, {
-    //             cause: {
-    //                 status: res.status,
-    //                 data: resData
-    //             }
-    //         });
-    //     } else if (serFunc) {
-    //         return {
-    //             data: serFunc(resData, addedParams, addedParams1),
-    //             status: res.status
-    //         };
-    //     }
-    //     return {
-    //         data: resData,
-    //         status: res.status
-    //     };
-    // }
+type MockDataParams = {
+    mockFunc: (data?: any) => any,
+    mockParams?: any,
+    isMock?: boolean
+}
+
+export const isNeedUseMockData = (
+    params: MockDataParams
+) => {
+    const {mockFunc, mockParams, isMock} = params
+    if (IS_MOCK_BY_SYSTEM || isMock) {
+        return mockFunc(mockParams);
+    }
 };
